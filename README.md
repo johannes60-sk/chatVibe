@@ -1,4 +1,8 @@
 
+
+Visual of the project when launched locally.
+A conversation between two different logged-in users.
+
 ![chat](chat.png)  ![chat2](chat2.png)
 
 
