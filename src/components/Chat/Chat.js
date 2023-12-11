@@ -25,12 +25,7 @@ const Chat = ({ location }) => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT, {
-      withCredentials: true,
-      extraHeaders: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
+    socket = io(ENDPOINT);
 
     setRoom(room);
     setName(name)
