@@ -25,7 +25,9 @@ const Chat = ({ location }) => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {
+      withCredentials: true
+    });;
 
     setRoom(room);
     setName(name)
@@ -38,6 +40,15 @@ const Chat = ({ location }) => {
   }, [ENDPOINT, location.search]);
   
   useEffect(() => {
+    socket.on('connect_error', (error) => {
+      console.error('Erreur de connexion Socket.IO :', error);
+    });
+
+    socket.on('disconnect', (reason) => {
+      console.warn('Déconnexion Socket.IO :', reason);
+    });
+
+    
     socket.on('message', message => {
       setMessages(messages => [ ...messages, message ]);
     });
