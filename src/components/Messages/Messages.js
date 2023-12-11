@@ -17,7 +17,7 @@ const Messages = ({ messages, name }) => (
     <div  className="messagesStatic">Mon messsage</div>
     <div  className="messagesStatic">Mon messsage</div>
     <div  className="messagesStatic">Mon messsage</div>
-    <div  className="messagesStatic">Mon messsage</div>
+    <div  className="messagesStatic">Mon message</div>
   </ScrollToBottom>
 );
 
