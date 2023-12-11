@@ -7,7 +7,7 @@
 //     "mocha": true
 //   },
 //   "rules": {
-//     "linebreak-style": ["error", "unix"],
+//     'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
 //     "import/prefer-default-export": 0,
 //     "max-len": [
 //       2,
@@ -35,6 +35,7 @@
 //         ]
 //       }
 //     ],
+
 //     "object-curly-newline": 0,
 //     "react/jsx-filename-extension": 0,
 //     "react/jsx-one-expression-per-line": 0,
