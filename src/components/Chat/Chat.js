@@ -10,7 +10,7 @@ import Input from '../Input/Input';
 import './Chat.css';
 
 // const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
-const ENDPOINT = 'https://api-chat-vibe-f5akk5tb8-johannes60-sk.vercel.app/';
+const ENDPOINT = 'https://api-chat-vibe-f5akk5tb8-johannes60-sk.vercel.app';
 // const ENDPOINT = 'http://localhost:5000/';
 
 let socket;
@@ -25,7 +25,12 @@ const Chat = ({ location }) => {
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
 
-    socket = io(ENDPOINT);
+    socket = io(ENDPOINT, {
+      withCredentials: true,
+      extraHeaders: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
 
     setRoom(room);
     setName(name)
