@@ -10,7 +10,8 @@ import Input from '../Input/Input';
 import './Chat.css';
 
 // const ENDPOINT = 'https://project-chat-application.herokuapp.com/';
-const ENDPOINT = 'http://localhost:5000/';
+const ENDPOINT = 'https://api-chat-vibe-f5akk5tb8-johannes60-sk.vercel.app/';
+// const ENDPOINT = 'http://localhost:5000/';
 
 let socket;
 
