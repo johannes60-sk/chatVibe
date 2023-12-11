@@ -3,3 +3,15 @@
   overflow: auto;
   flex: auto;
 }
+
+.messagesStatic{
+  margin-left: 45px !important;
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+  background:#f3f3f3 !important;
+  height: 45px !important;
+  width: 265px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 12px;
+}
